@@ -20,20 +20,21 @@ namespace MyBankMobileApp
         public AccountType AccountType { get; set; }
         public string AccountNumberGenerated { get; set; } // Account number generated here
 
+
         //We'll store the hash and salt pin here for account transaction here
         public byte[] PinHash { get; set; }
         public byte[] pinSalt { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
 
-        Random random = new Random(); //come back to this later please - not clear yet
-        public Account()
-        {
-           
-            AccountName = $"{FirstName} {LastName}";
-        }
+        
+
+
 
     }
+
+   
+
     public enum AccountType
     {
         Savings,

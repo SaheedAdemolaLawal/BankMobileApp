@@ -11,7 +11,7 @@ namespace MyBankMobileApp
     {
         public int Id { set; get; }
         public string TransactionUniqueReference { set; get; }
-        public decimal TransactionAmount { set; get; }
+        public decimal TransactionAmount { set; get; } 
         public decimal TransactionFee { set; get; } = 0; //come back to this later
         public TranStatus TransactionStatus { set; get; }
         public bool IsSuccessful => TransactionStatus.Equals(TranStatus.Successful); //Check later
@@ -20,6 +20,8 @@ namespace MyBankMobileApp
         public string TransactionParticulars { set; get; }
         public TranType TransactionType {  set; get; }
         public DateTime TransactionDate { set; get; }
+        public Account Account { get; set; }
+
     }
 }
 public enum TranStatus
